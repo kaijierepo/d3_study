@@ -5,6 +5,7 @@ import "./App.css";
 import LinePlot from "./components/LinePlot";
 import GeoMap from "./components/GeoMap";
 import { Marks } from './components/earth';
+import Coordinate from './components/coordinate'
 
 const jsonUrl = 'https://unpkg.com/world-atlas@2.0.2/countries-50m.json'
 const jsonUrl1 = 'http://127.0.0.1:5501/china.json'
@@ -32,8 +33,11 @@ function App() {
       <div onMouseMove={onMouseMove}>
         <LinePlot data={data} />
       </div>
+      <div>
+        <Coordinate />
+      </div>
       <Marks data={mapData} ></Marks>
-      <GeoMap></GeoMap>
+      {/* <GeoMap></GeoMap> */}
       <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
